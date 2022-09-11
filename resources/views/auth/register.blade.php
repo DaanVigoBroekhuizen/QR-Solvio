@@ -1,9 +1,7 @@
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
+            <h3>Welkom op mijn website waar je een visite kaartje kan aanmaken, maak hier je account aan! Als je al een account hebt kan je onderin met de link naar de login pagina!</h3>
         </x-slot>
 
         <!-- Validation Errors -->

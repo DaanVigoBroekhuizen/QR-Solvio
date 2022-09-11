@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\CardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [RegisteredUserController::class, 'create'])
+    ->name('register');
+
+Route::post('/sendCard', [CardController::class, 'store'])->name('sendCard');
+Route::post('/viewCard', [CardController::class, 'show'])->name('viewCard');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
